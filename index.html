@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shared video</title>
+</head>
+<body style="font-family:sans-serif;text-align:center;margin-top:3rem">
+  <h2 id="who"></h2>
+  <a id="go" href="#">Watch on TikTok</a>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const user = params.get("ref") || "unknown";
+    const video = "https://vt.tiktok.com/ZSbtPU9nt/";
+
+    document.getElementById("who").textContent = "Shared by @" + user;
+    document.getElementById("go").href = video;
+  </script>
+</body>
+</html>
